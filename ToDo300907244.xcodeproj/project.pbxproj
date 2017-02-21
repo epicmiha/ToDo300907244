@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		C92F4F472055F153D6EF6D20 /* Pods_ToDo300907244.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818B3AAEF08C3C11BC581577 /* Pods_ToDo300907244.framework */; };
 		F28960721E5BA9610031153E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960711E5BA9610031153E /* AppDelegate.swift */; };
-		F28960741E5BA9610031153E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960731E5BA9610031153E /* ViewController.swift */; };
+		F28960741E5BA9610031153E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960731E5BA9610031153E /* LoginViewController.swift */; };
 		F28960771E5BA9610031153E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28960751E5BA9610031153E /* Main.storyboard */; };
 		F28960791E5BA9610031153E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28960781E5BA9610031153E /* Assets.xcassets */; };
 		F289607C1E5BA9610031153E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F289607A1E5BA9610031153E /* LaunchScreen.storyboard */; };
 		F28960841E5BAF940031153E /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960831E5BAF940031153E /* ToDo.swift */; };
 		F28960861E5BB2550031153E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F28960851E5BB2550031153E /* GoogleService-Info.plist */; };
+		F28960881E5BB3200031153E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960871E5BB3200031153E /* ListViewController.swift */; };
+		F289608A1E5BB32F0031153E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28960891E5BB32F0031153E /* DetailsViewController.swift */; };
+		F289608C1E5BC14C0031153E /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F289608B1E5BC14C0031153E /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +26,16 @@
 		818B3AAEF08C3C11BC581577 /* Pods_ToDo300907244.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo300907244.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F289606E1E5BA9610031153E /* ToDo300907244.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo300907244.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28960711E5BA9610031153E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F28960731E5BA9610031153E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F28960731E5BA9610031153E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F28960761E5BA9610031153E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F28960781E5BA9610031153E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F289607B1E5BA9610031153E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F289607D1E5BA9610031153E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28960831E5BAF940031153E /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		F28960851E5BB2550031153E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F28960871E5BB3200031153E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F28960891E5BB32F0031153E /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F289608B1E5BC14C0031153E /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +89,16 @@
 			isa = PBXGroup;
 			children = (
 				F28960711E5BA9610031153E /* AppDelegate.swift */,
-				F28960731E5BA9610031153E /* ViewController.swift */,
+				F28960731E5BA9610031153E /* LoginViewController.swift */,
 				F28960751E5BA9610031153E /* Main.storyboard */,
 				F28960781E5BA9610031153E /* Assets.xcassets */,
 				F289607A1E5BA9610031153E /* LaunchScreen.storyboard */,
 				F289607D1E5BA9610031153E /* Info.plist */,
 				F28960831E5BAF940031153E /* ToDo.swift */,
 				F28960851E5BB2550031153E /* GoogleService-Info.plist */,
+				F28960871E5BB3200031153E /* ListViewController.swift */,
+				F28960891E5BB32F0031153E /* DetailsViewController.swift */,
+				F289608B1E5BC14C0031153E /* ToDoCell.swift */,
 			);
 			path = ToDo300907244;
 			sourceTree = "<group>";
@@ -219,8 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F28960841E5BAF940031153E /* ToDo.swift in Sources */,
-				F28960741E5BA9610031153E /* ViewController.swift in Sources */,
+				F289608C1E5BC14C0031153E /* ToDoCell.swift in Sources */,
+				F28960741E5BA9610031153E /* LoginViewController.swift in Sources */,
+				F28960881E5BB3200031153E /* ListViewController.swift in Sources */,
 				F28960721E5BA9610031153E /* AppDelegate.swift in Sources */,
+				F289608A1E5BB32F0031153E /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
