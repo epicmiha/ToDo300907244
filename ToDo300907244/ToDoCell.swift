@@ -1,10 +1,11 @@
 //
 //  ToDoCell.swift
 //  ToDo300907244
-//
-//  Created by Serhii Pianykh on 2017-02-20.
+//  300907244
+//  Created by Mykhailo Obelchak on 2017-02-20.
 //  Copyright © 2017 Mykhailo Obelchak. All rights reserved.
 //
+//  TableCell for todo
 
 import UIKit
 import FirebaseDatabase
@@ -16,6 +17,8 @@ class ToDoCell: UITableViewCell {
     @IBOutlet weak var toDoName: UILabel!
     @IBOutlet weak var doneSwitch: UISwitch!
     
+    //setting up the cell
+    //setting switch state and text (normal/faded and crossed)
     func setCell(todo: ToDo) {
         toDoName.text = todo.name
         if (todo.done) {
@@ -35,6 +38,7 @@ class ToDoCell: UITableViewCell {
         donePressedAction!(self)
     }
     
+    //update completion for todo
     func updateDone(todo: ToDo) {
         if todo.done {
             todo.done = false

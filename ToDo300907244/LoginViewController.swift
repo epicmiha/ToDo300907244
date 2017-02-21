@@ -1,10 +1,11 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  ToDo300907244
-//
-//  Created by Serhii Pianykh on 2017-02-20.
+//  300907244
+//  Created by Mykhailo Obelchak on 2017-02-20.
 //  Copyright © 2017 Mykhailo Obelchak. All rights reserved.
 //
+//  ViewController for login
 
 import UIKit
 import FirebaseAuth
@@ -15,13 +16,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signBtn: UIButton!
     
+    //flag to know if actually logged in
     var loginSuccess: Bool = false
     
+    //setting rounded corners for button here
     override func viewDidLoad() {
         super.viewDidLoad()
         signBtn.layer.cornerRadius = 4
     }
 
+    //trying to create user and logging in
     @IBAction func signPressed(_ sender: UIButton) {
         FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
             if error != nil {

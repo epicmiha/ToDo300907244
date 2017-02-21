@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ToDo300907244
 //
-//  Created by Serhii Pianykh on 2017-02-20.
+//  Created by Mykhailo Obelchak on 2017-02-20.
 //  Copyright © 2017 Mykhailo Obelchak. All rights reserved.
 //
 

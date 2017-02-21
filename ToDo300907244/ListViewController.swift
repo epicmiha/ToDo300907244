@@ -1,10 +1,11 @@
 //
 //  ListViewController.swift
 //  ToDo300907244
-//
-//  Created by Serhii Pianykh on 2017-02-20.
+//  300907244
+//  Created by Mykhailo Obelchak on 2017-02-20.
 //  Copyright © 2017 Mykhailo Obelchak. All rights reserved.
 //
+// View Controller for Todos listing
 
 import UIKit
 import FirebaseAuth
@@ -12,6 +13,7 @@ import FirebaseDatabase
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //setting up references to db
     var todoRef: FIRDatabaseReference? = nil
     
     let storage = FIRDatabase.database().reference(withPath: "todos")
@@ -29,7 +31,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         todoRef = storage.child((FIRAuth.auth()?.currentUser?.uid)!)
-        
+        //observing and loading changes
         todoRef?.observe(.value, with: { snapshot in
             var todos = [ToDo]()
             for item in snapshot.children {
@@ -46,16 +48,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
-    
+    //logging out
     @IBAction func logoutPressed(_ sender: Any) {
         try! FIRAuth.auth()!.signOut()
         self.dismiss(animated: true, completion: nil)
     }
     
+    //setting up every single cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as? ToDoCell {
             let todo = list[indexPath.row]
-            
+            //closure actions for cell
             cell.donePressedAction = { (self) in
                 cell.updateDone(todo: todo)
             }
@@ -70,6 +73,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return list.count
     }
     
+    //delete todo wth swipe
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let todo = list[indexPath.row]
@@ -77,11 +81,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    //perform segue for selected todo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let todo = list[indexPath.row]
         performSegue(withIdentifier: "DetailsVC", sender: todo)
     }
 
+    //sending todo to next VC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DetailsViewController {
             if let todo = sender as? ToDo {
@@ -91,7 +97,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
+    //creating alert with textfield to add new todo
     @IBAction func addToDoPressed(_ sender: Any) {
         let alert = UIAlertController(title: "ToDo",
                                       message: "Add a task",

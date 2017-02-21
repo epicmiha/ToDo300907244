@@ -1,10 +1,11 @@
 //
 //  DetailsViewController.swift
 //  ToDo300907244
-//
-//  Created by Serhii Pianykh on 2017-02-20.
+//  300907244
+//  Created by Mykhailo Obelchak on 2017-02-20.
 //  Copyright © 2017 Mykhailo Obelchak. All rights reserved.
 //
+//  Detailed view of todo
 
 import UIKit
 
@@ -27,6 +28,7 @@ class DetailsViewController: UIViewController {
         }
     }
     
+    //loading todo from previous VC
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +42,7 @@ class DetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    //saving todo and going back to prev VC
     @IBAction func savePressed(_ sender: Any) {
         todo.name = toDoName.text!
         todo.details = toDoDetails.text!
